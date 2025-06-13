@@ -46,10 +46,20 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Login Button */}
-        <button className="px-5 py-2 bg-primary hover:bg-primary-dull transition text-white rounded-full">
+        {!user ?(
+        <button onClick={()=>setShowUserLogin(true)} className="px-5 py-2 bg-primary hover:bg-primary-dull transition text-white rounded-full">
           Login
-        </button>
+        </button>)
+        :
+        (
+          <div>
+            <img src={assets.profile_icon} className='w-10'/>
+            <ul>
+              <li>My Orders</li>
+              <li>Logout</li>
+            </ul>
+          </div>
+        )}
       </div>
  
       {/* Hamburger Button */}
