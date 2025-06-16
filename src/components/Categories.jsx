@@ -1,5 +1,6 @@
 import React from 'react'
 import { categories } from '../assets/assets'
+// eslint-disable-next-line no-unused-vars
 import { useAppContext } from '../context/AppContext'
 import { useNavigate } from 'react-router-dom'
 function Categories() {
@@ -26,7 +27,7 @@ function Categories() {
         </div>
         ))}
       </div>
-    </div>
+    </div> 
     </div>
   )
 }

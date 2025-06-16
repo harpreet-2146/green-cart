@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import MainBanner from './components/MainBanner'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
 
@@ -12,6 +13,7 @@ const App = () => {
     <div>
 
       {isSellerPath ? null : <Navbar/>}
+      <Toaster/>
 
       <div className={`${isSellerPath ? "" :
         " px-6 md:px-16 lg:px-24 xl:px-32"}`}>
