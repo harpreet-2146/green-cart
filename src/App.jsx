@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 import Footer from './components/Footer'
 import { useAppContext } from './context/AppContext'
 import Login from './components/Login'
+import AllProducts from './components/AllProducts'
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
         " px-6 md:px-16 lg:px-24 xl:px-32"}`}>
         <Routes>
           <Route path='/' element={<Home/>}/>
+          <Route path='/products' element={<AllProducts/>}/>
         </Routes>
       </div>
       {! isSellerPath && <Footer/>}
