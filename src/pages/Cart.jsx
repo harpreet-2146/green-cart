@@ -12,10 +12,6 @@ const Cart = () => {
     const [addresses,setAddresses]=useState(dummyAddress)
     const [selectedAddress,setSelectedAddress]=useState(dummyAddress[0])
     const [paymentOption,setPaymentOption]=useState("COD")
-    
-    const placeOrder=async()=>{
-
-    }
 
     const getCart=()=>{
         let tempArray=[]
@@ -130,7 +126,8 @@ const Cart = () => {
 
                 <div className="text-gray-500 mt-4 space-y-2">
                     <p className="flex justify-between">
-                        <span>Price</span><span>{currency}{getCartAmount}</span>
+                        <span>Price</span>
+                        <span>{currency}{getCartAmount()}</span>
                     </p>
                     <p className="flex justify-between">
                         <span>Shipping Fee</span><span className="text-green-600">Free</span>
@@ -143,10 +140,7 @@ const Cart = () => {
                     </p>
                 </div>
 
-                <button onClick={placeOrder}
-                 className="w-full py-3 mt-6 cursor-pointer bg-primary text-white font-medium hover:bg-primary-dull transition">
-                    {paymentOption==="COD" ? "place order" : "Proceed to Checkout"}
-                </button>
+                
             </div>
         </div>
     ) : null
